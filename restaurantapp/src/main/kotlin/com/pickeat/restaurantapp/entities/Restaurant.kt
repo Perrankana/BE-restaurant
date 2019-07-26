@@ -13,6 +13,6 @@ class Restaurant(
         var postcode: String,
         var logo: String,
         var image: String,
-        var latitud: Double,
-        var longitud: Double
+        var latitude: Double,
+        var longitude: Double
 )
