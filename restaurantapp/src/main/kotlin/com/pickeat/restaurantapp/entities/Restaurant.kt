@@ -1,8 +1,6 @@
 package com.pickeat.restaurantapp.entities
 
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.Id
+import javax.persistence.*
 
 @Entity
 class Restaurant(
