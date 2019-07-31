@@ -1,15 +1,20 @@
 package com.pickeat.restaurantapp.entities.menu
 
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.Id
+import javax.persistence.*
 
-//@Entity
-//data class Accessory(
-//        @Id @GeneratedValue var id: Long? = null,
-//        var group: Int,
-//        var groupName: String,
-//        var name: String,
-//        var position: Int,
-//        var price: Double
-//)
+@Entity
+data class Accessory(
+        @Id @GeneratedValue var id: Long? = null,
+        var groupId: Int,
+        var groupName: String,
+        var name: String,
+        var position: Int,
+        var price: Double,
+        var optional: Boolean,
+        @ManyToOne
+        @JoinColumn(name= "menu_category_id", nullable = true)
+        var menuCategory: MenuCategory? = null,
+        @ManyToOne
+        @JoinColumn(name= "menu_item_id", nullable = true)
+        var menuItem: MenuItem? = null
+)

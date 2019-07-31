@@ -9,6 +9,6 @@ data class Menu(
         @ManyToOne
         @JoinColumn(name= "restaurant_id", nullable = false)
         var restaurant: Restaurant,
-        var name: String,
-        var description: String
+        var name: String? = null,
+        var description: String? = null
 )
