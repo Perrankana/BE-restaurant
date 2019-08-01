@@ -1,14 +1,15 @@
 package com.pickeat.restaurantapp.entities.menu
 
-import com.pickeat.restaurantapp.entities.Restaurant
+import com.pickeat.restaurantapp.entities.RestaurantDao
 import javax.persistence.*
 
 @Entity
-data class Menu(
+@Table(name = "Menu")
+data class MenuDao(
         @Id @GeneratedValue var id: Long? = null,
         @ManyToOne
         @JoinColumn(name= "restaurant_id", nullable = false)
-        var restaurant: Restaurant,
+        var restaurant: RestaurantDao,
         var name: String? = null,
         var description: String? = null
 )

@@ -10,5 +10,5 @@ data class MenuCategory(
         var position: Int,
         @ManyToOne
         @JoinColumn(name= "menu_id", nullable = false)
-        var menu: Menu
+        var menuDao: MenuDao
 )

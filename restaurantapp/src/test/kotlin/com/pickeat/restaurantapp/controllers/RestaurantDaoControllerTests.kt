@@ -1,7 +1,7 @@
 package com.pickeat.restaurantapp.controllers
 
 import com.ninjasquad.springmockk.MockkBean
-import com.pickeat.restaurantapp.entities.Restaurant
+import com.pickeat.restaurantapp.entities.RestaurantDao
 import com.pickeat.restaurantapp.repositories.RestaurantRepository
 import io.mockk.every
 import org.junit.jupiter.api.Test
@@ -14,14 +14,14 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers.*
 import java.util.*
 
 @WebMvcTest
-class RestaurantControllerTests(@Autowired val mockMvc: MockMvc) {
+class RestaurantDaoControllerTests(@Autowired val mockMvc: MockMvc) {
 
     @MockkBean
     private lateinit var restaurantRepository: RestaurantRepository
 
     @Test
     fun `List restaurants`() {
-        val restaurant1 = Restaurant(
+        val restaurant1 = RestaurantDao(
                 name = "100 Montaditos",
                 address = "Rambla del Poblenou",
                 city = "Barcelona",
@@ -31,7 +31,7 @@ class RestaurantControllerTests(@Autowired val mockMvc: MockMvc) {
                 latitude = 41.401283,
                 longitude = 2.198988)
 
-        val restaurant2 = Restaurant(
+        val restaurant2 = RestaurantDao(
                 name = "Timesburg",
                 address = "Carrer Pujades, 168",
                 city = "Barcelona",
@@ -42,7 +42,7 @@ class RestaurantControllerTests(@Autowired val mockMvc: MockMvc) {
                 longitude = 2.197532)
 
         every { restaurantRepository.findAll() } returns listOf(restaurant1, restaurant2)
-        mockMvc.perform(get("/api/restaurant/").accept(MediaType.APPLICATION_JSON))
+        mockMvc.perform(get("/api/restaurantDao/").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk)
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
                 .andExpect(jsonPath("\$.[0].name").value(restaurant1.name))
@@ -68,7 +68,7 @@ class RestaurantControllerTests(@Autowired val mockMvc: MockMvc) {
     fun `get restaurant by id`() {
         val id = 1L
 
-        val restaurant1 = Restaurant(
+        val restaurant1 = RestaurantDao(
                 id = id,
                 name = "100 Montaditos",
                 address = "Rambla del Poblenou",
@@ -80,7 +80,7 @@ class RestaurantControllerTests(@Autowired val mockMvc: MockMvc) {
                 longitude = 2.198988)
 
         every { restaurantRepository.findById(id) } returns Optional.of(restaurant1)
-        mockMvc.perform(get("/api/restaurant/$id").accept(MediaType.APPLICATION_JSON))
+        mockMvc.perform(get("/api/restaurantDao/$id").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk)
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
                 .andExpect(jsonPath("\$.name").value(restaurant1.name))

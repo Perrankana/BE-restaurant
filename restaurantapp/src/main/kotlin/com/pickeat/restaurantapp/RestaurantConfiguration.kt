@@ -1,8 +1,8 @@
 package com.pickeat.restaurantapp
 
-import com.pickeat.restaurantapp.entities.Restaurant
+import com.pickeat.restaurantapp.entities.RestaurantDao
 import com.pickeat.restaurantapp.entities.menu.Accessory
-import com.pickeat.restaurantapp.entities.menu.Menu
+import com.pickeat.restaurantapp.entities.menu.MenuDao
 import com.pickeat.restaurantapp.entities.menu.MenuCategory
 import com.pickeat.restaurantapp.entities.menu.MenuItem
 import com.pickeat.restaurantapp.repositories.*
@@ -21,7 +21,7 @@ class RestaurantConfiguration {
             menuItemRepository: MenuItemRepository,
             accessoryRepository: AccessoryRepository
     ) = ApplicationRunner {
-        val restaurant = Restaurant(
+        val restaurant = RestaurantDao(
                 name = "100 Montaditos",
                 address = "Rambla del Poblenou",
                 city = "Barcelona",
@@ -31,7 +31,7 @@ class RestaurantConfiguration {
                 latitude = 41.401283,
                 longitude = 2.198988)
 
-        val restaurant2 = Restaurant(
+        val restaurant2 = RestaurantDao(
                 name = "Timesburg",
                 address = "Carrer Pujades, 168",
                 city = "Barcelona",
@@ -44,9 +44,9 @@ class RestaurantConfiguration {
         restaurantRepository.save(restaurant)
         restaurantRepository.save(restaurant2)
 
-        val menu = Menu(
+        val menu = MenuDao(
                 restaurant = restaurant2,
-                name = "Daily menu",
+                name = "Daily menuDao",
                 description = "Great burgers"
         )
 
@@ -55,7 +55,7 @@ class RestaurantConfiguration {
         /*CATEGORY ENSALADA*/
 
         val menuCategoryEnsalada = MenuCategory(
-                menu = menu,
+                menuDao = menu,
                 name = "Ensaladas",
                 position = 2
         )
@@ -84,7 +84,7 @@ class RestaurantConfiguration {
         /*CATEGORY BOCADILLO*/
 
         val menuCategoryBocadillos = MenuCategory(
-                menu = menu,
+                menuDao = menu,
                 name = "Bocadillos",
                 position = 3
         )
@@ -113,7 +113,7 @@ class RestaurantConfiguration {
         /*CATEGORY PATATAS FRITAS*/
 
         val menuCategoryPatatas = MenuCategory(
-                menu = menu,
+                menuDao = menu,
                 name = "Patatas Fritas",
                 position = 1
         )
@@ -163,7 +163,7 @@ class RestaurantConfiguration {
         /*CATEGORY BURGERS*/
 
         val menuCategoryBurgers = MenuCategory(
-                menu = menu,
+                menuDao = menu,
                 name = "Hamburguesas",
                 position = 0,
                 description = "Todas nuestras hamburguesas están elaboradas con carnes cuidadosamente seleccionadas, preparadas a la parrilla y AL PUNTO."
