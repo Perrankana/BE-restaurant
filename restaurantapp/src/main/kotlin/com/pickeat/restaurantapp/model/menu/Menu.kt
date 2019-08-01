@@ -1,4 +1,4 @@
-package com.pickeat.restaurantapp.model
+package com.pickeat.restaurantapp.model.menu
 
 import com.pickeat.restaurantapp.model.menu.MenuCategory
 

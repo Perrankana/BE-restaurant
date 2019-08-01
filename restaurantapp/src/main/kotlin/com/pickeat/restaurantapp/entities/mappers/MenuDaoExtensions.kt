@@ -1,7 +1,7 @@
 package com.pickeat.restaurantapp.entities.mappers
 
 import com.pickeat.restaurantapp.entities.menu.MenuDao
-import com.pickeat.restaurantapp.model.Menu
+import com.pickeat.restaurantapp.model.menu.Menu
 
 fun List<MenuDao>.toDomain(): List<Menu> =
         map { it.toDomain() }
