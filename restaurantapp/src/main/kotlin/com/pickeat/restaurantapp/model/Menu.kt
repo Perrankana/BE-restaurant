@@ -7,5 +7,5 @@ data class Menu(
         val restaurantId: Long,
         val name: String? = null,
         val description: String? = null,
-        val menuCategories: List<MenuCategory>? = null
+        val menuCategories: List<MenuCategory> = emptyList()
 )
