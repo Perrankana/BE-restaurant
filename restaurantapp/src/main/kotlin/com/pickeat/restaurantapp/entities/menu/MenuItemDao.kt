@@ -4,7 +4,7 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "MenuItem")
-data class MenuItem(
+data class MenuItemDao(
         @Id @GeneratedValue var id: Long? = null,
         var name: String,
         var description: String? = null,

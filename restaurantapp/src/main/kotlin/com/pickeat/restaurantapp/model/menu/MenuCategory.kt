@@ -5,5 +5,6 @@ data class MenuCategory(
         val name: String,
         val description: String? = null,
         val position: Int,
-        val menuId: Long
+        val menuId: Long,
+        val menuItems: List<MenuItem> = emptyList()
 )

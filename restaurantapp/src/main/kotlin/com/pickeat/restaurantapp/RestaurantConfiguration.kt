@@ -4,7 +4,7 @@ import com.pickeat.restaurantapp.entities.RestaurantDao
 import com.pickeat.restaurantapp.entities.menu.Accessory
 import com.pickeat.restaurantapp.entities.menu.MenuDao
 import com.pickeat.restaurantapp.entities.menu.MenuCategoryDao
-import com.pickeat.restaurantapp.entities.menu.MenuItem
+import com.pickeat.restaurantapp.entities.menu.MenuItemDao
 import com.pickeat.restaurantapp.repositories.*
 import org.springframework.boot.ApplicationRunner
 import org.springframework.context.annotation.Bean
@@ -62,7 +62,7 @@ class RestaurantConfiguration {
 
         menuCategoryRepository.save(menuCategoryEnsalada)
 
-        val menuEnsaladaTimesburg = MenuItem(
+        val menuEnsaladaTimesburg = MenuItemDao(
                 menuCategory = menuCategoryEnsalada,
                 name = "Ensalada Timesburg",
                 description = "Brotes de mezclum, nueces, queso de cabra y confitura de arándanos con su vinagreta timesburg.",
@@ -70,7 +70,7 @@ class RestaurantConfiguration {
                 price = 8.2
         )
 
-        val menuEnsaladaCaesar = MenuItem(
+        val menuEnsaladaCaesar = MenuItemDao(
                 menuCategory = menuCategoryEnsalada,
                 name = "Ensalada Caesar",
                 description = "Lechuga francesa, pollo, bacon, croutons y queso parmigiano con vinagreta caesar.",
@@ -91,7 +91,7 @@ class RestaurantConfiguration {
 
         menuCategoryRepository.save(menuCategoryBocadillos)
 
-        val menuBocataNordico = MenuItem(
+        val menuBocataNordico = MenuItemDao(
                 menuCategory = menuCategoryBocadillos,
                 name = "Nórdico (Salmón)",
                 description = "Delicioso bocadillo crujiente en pan de cristal, rúcula, salmón, eneldo, salsa tártara y un toque de soja.",
@@ -99,7 +99,7 @@ class RestaurantConfiguration {
                 price = 6.9
         )
 
-        val menuBocataBellota = MenuItem(
+        val menuBocataBellota = MenuItemDao(
                 menuCategory = menuCategoryEnsalada,
                 name = "Bellota (Jamón Ibérico)",
                 description = "Bocadillo crujiente en pan de cristal, jamón ibérico, tomate y aceite de oliva.",
@@ -120,14 +120,14 @@ class RestaurantConfiguration {
 
         menuCategoryRepository.save(menuCategoryPatatas)
 
-        val menuPatatasRacion = MenuItem(
+        val menuPatatasRacion = MenuItemDao(
                 menuCategory = menuCategoryPatatas,
                 name = "La Ración",
                 position = 1,
                 price = 6.9
         )
 
-        val menuPatatasKilo = MenuItem(
+        val menuPatatasKilo = MenuItemDao(
                 menuCategory = menuCategoryPatatas,
                 name = "1/2 Kilo",
                 position = 1,
@@ -207,7 +207,7 @@ class RestaurantConfiguration {
 
         accessoryRepository.save(accessoryBurger3)
 
-        val menuBurger1 = MenuItem(
+        val menuBurger1 = MenuItemDao(
                 menuCategory = menuCategoryBurgers,
                 name = "Paris 95",
                 description = "200g de carne 100% vacuno, tomate, lechuga francesa, cebolla, nuestro toque secreto para carnes y mayonesa timesburg.",
@@ -217,7 +217,7 @@ class RestaurantConfiguration {
 
         menuItemRepository.save(menuBurger1)
 
-        val menuBurger2 = MenuItem(
+        val menuBurger2 = MenuItemDao(
                 menuCategory = menuCategoryBurgers,
                 name = "La Roquefort",
                 description = "200g de carne 100% vacuno, salsa roquefort, rúcula, nueces rotas, tomate y mayonesa timesburg.",
@@ -251,7 +251,7 @@ class RestaurantConfiguration {
 
         accessoryRepository.save(accessorySalsa2)
 
-        val menuBurger3 = MenuItem(
+        val menuBurger3 = MenuItemDao(
                 menuCategory = menuCategoryBurgers,
                 name = "Osaka",
                 description = "200g de carne 100% vacuno, mayonesa japonesa, wakame, salsa teriyaki, tomate y lechuga francesa.",
@@ -261,7 +261,7 @@ class RestaurantConfiguration {
 
         menuItemRepository.save(menuBurger3)
 
-        val menuBurger4 = MenuItem(
+        val menuBurger4 = MenuItemDao(
                 menuCategory = menuCategoryBurgers,
                 name = "Pollo Piri Piri",
                 description = "Cortes finos de pechuga de pollo con nuestro aliño piri piri, tomate, rúcula, cebolla y mayonesa timesburg.",

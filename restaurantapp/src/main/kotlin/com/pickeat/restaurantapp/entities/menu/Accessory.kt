@@ -16,5 +16,5 @@ data class Accessory(
         var menuCategory: MenuCategoryDao? = null,
         @ManyToOne
         @JoinColumn(name= "menu_item_id", nullable = true)
-        var menuItem: MenuItem? = null
+        var menuItem: MenuItemDao? = null
 )
