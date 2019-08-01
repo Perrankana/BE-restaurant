@@ -1,6 +1,9 @@
 package com.pickeat.restaurantapp.repositories
 
-import com.pickeat.restaurantapp.entities.menu.Accessory
+import com.pickeat.restaurantapp.entities.menu.AccessoryDao
 import org.springframework.data.repository.CrudRepository
 
-interface AccessoryRepository : CrudRepository<Accessory, Long>
+interface AccessoryRepository : CrudRepository<AccessoryDao, Long> {
+    fun findAllByMenuCategoryIdAndOptional(menuCategoryId: Long, optional: Boolean): List<AccessoryDao>
+    fun findAllByMenuItemIdAndOptional(menuItemId: Long, optional: Boolean): List<AccessoryDao>
+}

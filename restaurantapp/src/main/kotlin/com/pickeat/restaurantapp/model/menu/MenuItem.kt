@@ -1,8 +1,5 @@
 package com.pickeat.restaurantapp.model.menu
 
-import com.pickeat.restaurantapp.entities.menu.Accessory
-
-
 data class MenuItem(
         val id: Long? = null,
         val name: String,

@@ -1,7 +1,7 @@
 package com.pickeat.restaurantapp
 
 import com.pickeat.restaurantapp.entities.RestaurantDao
-import com.pickeat.restaurantapp.entities.menu.Accessory
+import com.pickeat.restaurantapp.entities.menu.AccessoryDao
 import com.pickeat.restaurantapp.entities.menu.MenuDao
 import com.pickeat.restaurantapp.entities.menu.MenuCategoryDao
 import com.pickeat.restaurantapp.entities.menu.MenuItemDao
@@ -137,7 +137,7 @@ class RestaurantConfiguration {
         menuItemRepository.save(menuPatatasRacion)
         menuItemRepository.save(menuPatatasKilo)
 
-        val accessorySalsaKetchup = Accessory(
+        val accessorySalsaKetchup = AccessoryDao(
                 groupId = 0,
                 groupName = "Salsas",
                 name = "Ketchup",
@@ -147,7 +147,7 @@ class RestaurantConfiguration {
                 menuCategory = menuCategoryPatatas
         )
 
-        val accessorySalsaMayo = Accessory(
+        val accessorySalsaMayo = AccessoryDao(
                 groupId = 0,
                 groupName = "Salsas",
                 name = "Mayonesa",
@@ -171,7 +171,7 @@ class RestaurantConfiguration {
 
         menuCategoryRepository.save(menuCategoryBurgers)
 
-        val accessoryBurger1 = Accessory(
+        val accessoryBurger1 = AccessoryDao(
                 groupId = 0,
                 groupName = "Otras carnes",
                 name = "Wagyu",
@@ -183,7 +183,7 @@ class RestaurantConfiguration {
 
         accessoryRepository.save(accessoryBurger1)
 
-        val accessoryBurger2 = Accessory(
+        val accessoryBurger2 = AccessoryDao(
                 groupId = 1,
                 groupName = "Panes",
                 name = "Semilla de Amapola",
@@ -195,7 +195,7 @@ class RestaurantConfiguration {
 
         accessoryRepository.save(accessoryBurger2)
 
-        val accessoryBurger3 = Accessory(
+        val accessoryBurger3 = AccessoryDao(
                 groupId = 0,
                 groupName = "Otras carnes",
                 name = "Carne ecológica",
@@ -227,7 +227,7 @@ class RestaurantConfiguration {
 
         menuItemRepository.save(menuBurger2)
 
-        val accessorySalsaChilli = Accessory(
+        val accessorySalsaChilli = AccessoryDao(
                 groupId = 0,
                 groupName = "Salsa",
                 name = "Chili",
@@ -239,7 +239,7 @@ class RestaurantConfiguration {
 
         accessoryRepository.save(accessorySalsaChilli)
 
-        val accessorySalsa2 = Accessory(
+        val accessorySalsa2 = AccessoryDao(
                 groupId = 0,
                 groupName = "Salsa",
                 name = "Guacamole",
