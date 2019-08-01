@@ -55,7 +55,7 @@ class RestaurantConfiguration {
         /*CATEGORY ENSALADA*/
 
         val menuCategoryEnsalada = MenuCategoryDao(
-                menuDao = menu,
+                menu = menu,
                 name = "Ensaladas",
                 position = 2
         )
@@ -84,7 +84,7 @@ class RestaurantConfiguration {
         /*CATEGORY BOCADILLO*/
 
         val menuCategoryBocadillos = MenuCategoryDao(
-                menuDao = menu,
+                menu = menu,
                 name = "Bocadillos",
                 position = 3
         )
@@ -113,7 +113,7 @@ class RestaurantConfiguration {
         /*CATEGORY PATATAS FRITAS*/
 
         val menuCategoryPatatas = MenuCategoryDao(
-                menuDao = menu,
+                menu = menu,
                 name = "Patatas Fritas",
                 position = 1
         )
@@ -163,7 +163,7 @@ class RestaurantConfiguration {
         /*CATEGORY BURGERS*/
 
         val menuCategoryBurgers = MenuCategoryDao(
-                menuDao = menu,
+                menu = menu,
                 name = "Hamburguesas",
                 position = 0,
                 description = "Todas nuestras hamburguesas están elaboradas con carnes cuidadosamente seleccionadas, preparadas a la parrilla y AL PUNTO."
