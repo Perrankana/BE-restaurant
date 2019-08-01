@@ -3,7 +3,7 @@ package com.pickeat.restaurantapp.entities.menu
 import javax.persistence.*
 
 @Entity
-data class MenuCategory(
+data class MenuCategoryDao(
         @Id @GeneratedValue var id: Long? = null,
         var name: String,
         var description: String? = null,

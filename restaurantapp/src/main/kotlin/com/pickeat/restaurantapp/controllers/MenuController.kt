@@ -1,8 +1,6 @@
 package com.pickeat.restaurantapp.controllers
 
 import com.pickeat.restaurantapp.entities.mappers.toDomain
-import com.pickeat.restaurantapp.entities.menu.MenuDao
-import com.pickeat.restaurantapp.entities.menu.MenuCategory
 import com.pickeat.restaurantapp.model.Menu
 import com.pickeat.restaurantapp.model.mappers.toDao
 import com.pickeat.restaurantapp.repositories.MenuRepository

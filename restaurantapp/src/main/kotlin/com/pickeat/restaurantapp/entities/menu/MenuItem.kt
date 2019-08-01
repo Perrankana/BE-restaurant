@@ -11,7 +11,7 @@ data class MenuItem(
         var price: Double,
         @ManyToOne
         @JoinColumn(name= "menu_category_id", nullable = false)
-        var menuCategory: MenuCategory
+        var menuCategory: MenuCategoryDao
 //        @OneToMany var requiredAccessories: List<Accessory>,
 //        @OneToMany var optionalAccessories: List<Accessory>
 )

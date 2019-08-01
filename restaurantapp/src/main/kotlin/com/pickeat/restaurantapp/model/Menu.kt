@@ -1,6 +1,6 @@
 package com.pickeat.restaurantapp.model
 
-import com.pickeat.restaurantapp.entities.menu.MenuCategory
+import com.pickeat.restaurantapp.model.menu.MenuCategory
 
 data class Menu(
         val id: Long? = null,

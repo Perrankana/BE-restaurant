@@ -1,6 +1,6 @@
 package com.pickeat.restaurantapp.repositories
 
-import com.pickeat.restaurantapp.entities.menu.MenuCategory
+import com.pickeat.restaurantapp.entities.menu.MenuCategoryDao
 import org.springframework.data.repository.CrudRepository
 
-interface MenuCategoryRepository : CrudRepository<MenuCategory, Long>
+interface MenuCategoryRepository : CrudRepository<MenuCategoryDao, Long>

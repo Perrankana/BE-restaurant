@@ -3,7 +3,7 @@ package com.pickeat.restaurantapp
 import com.pickeat.restaurantapp.entities.RestaurantDao
 import com.pickeat.restaurantapp.entities.menu.Accessory
 import com.pickeat.restaurantapp.entities.menu.MenuDao
-import com.pickeat.restaurantapp.entities.menu.MenuCategory
+import com.pickeat.restaurantapp.entities.menu.MenuCategoryDao
 import com.pickeat.restaurantapp.entities.menu.MenuItem
 import com.pickeat.restaurantapp.repositories.*
 import org.springframework.boot.ApplicationRunner
@@ -46,7 +46,7 @@ class RestaurantConfiguration {
 
         val menu = MenuDao(
                 restaurant = restaurant2,
-                name = "Daily menuDao",
+                name = "Daily menu",
                 description = "Great burgers"
         )
 
@@ -54,7 +54,7 @@ class RestaurantConfiguration {
 
         /*CATEGORY ENSALADA*/
 
-        val menuCategoryEnsalada = MenuCategory(
+        val menuCategoryEnsalada = MenuCategoryDao(
                 menuDao = menu,
                 name = "Ensaladas",
                 position = 2
@@ -83,7 +83,7 @@ class RestaurantConfiguration {
 
         /*CATEGORY BOCADILLO*/
 
-        val menuCategoryBocadillos = MenuCategory(
+        val menuCategoryBocadillos = MenuCategoryDao(
                 menuDao = menu,
                 name = "Bocadillos",
                 position = 3
@@ -112,7 +112,7 @@ class RestaurantConfiguration {
 
         /*CATEGORY PATATAS FRITAS*/
 
-        val menuCategoryPatatas = MenuCategory(
+        val menuCategoryPatatas = MenuCategoryDao(
                 menuDao = menu,
                 name = "Patatas Fritas",
                 position = 1
@@ -162,7 +162,7 @@ class RestaurantConfiguration {
 
         /*CATEGORY BURGERS*/
 
-        val menuCategoryBurgers = MenuCategory(
+        val menuCategoryBurgers = MenuCategoryDao(
                 menuDao = menu,
                 name = "Hamburguesas",
                 position = 0,
